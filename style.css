@@ -1,0 +1,132 @@
+/* Reset básico de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+/* Sessão principal com a imagem de fundo em tela cheia */
+.hero-section {
+    /* Gradiente escuro para garantir a leitura + Imagem de montanhas/natureza */
+    background: linear-gradient(rgba(20, 25, 40, 0.3), rgba(20, 25, 40, 0.5)),
+                url('https://images.unsplash.com/photo-1546416629-9e8c42a2af2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho de Navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 5%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d1d5db;
+}
+
+/* Ícones Sociais circulares */
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.socials a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.socials a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Tipografia e Posicionamento do Centro */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5rem; /* Ajuste visual para compensar o header */
+}
+
+.hero-content h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: -1rem; /* Puxa o H2 para mais perto do H1 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 8rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Botão de Ação (Call to Action) */
+.btn {
+    background: #ffffff;
+    color: #111827;
+    text-decoration: none;
+    padding: 1.1rem 2.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade Básica para Celulares */
+@media (max-width: 900px) {
+    nav ul {
+        display: none; /* Esconde links no mobile em favor de um menu hambúrguer futuro */
+    }
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+}
